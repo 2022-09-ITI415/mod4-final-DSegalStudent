@@ -9,6 +9,7 @@ public class HUD : MonoBehaviour
 {
     [Header("Set in Inspector")]
     public Text Collected;
+    public Text LeverErrorPrompt;
     public GameObject Keycard;
     public AudioSource audioSource;
     public AudioClip audioclip;
