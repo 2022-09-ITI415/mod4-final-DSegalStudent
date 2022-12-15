@@ -13,6 +13,7 @@ public class HUD : MonoBehaviour
     public GameObject Keycard;
     public AudioSource audioSource;
     public AudioClip audioclip;
+    public AudioClip DoorOpening;
 
     [Header("Set Dynamically")]
     public int CollectedKeycards;
@@ -42,6 +43,11 @@ public void UpdateHUD()
             Destroy(other.gameObject);
 
         }
+    }
+
+    public void PlayDoorOpening()
+    {
+        audioSource.PlayOneShot(DoorOpening);
     }
 
 }

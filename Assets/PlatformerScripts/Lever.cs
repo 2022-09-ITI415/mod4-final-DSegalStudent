@@ -27,6 +27,7 @@ public class Lever : MonoBehaviour
             Door1.GetComponent<Animator>().Play("Front Gate Opening");
             Door2.GetComponent<Animator>().enabled = true;
             Door2.GetComponent<Animator>().Play("Front Gate Opening");
+            Player.GetComponent<HUD>().PlayDoorOpening();
 
 
             //StartCoroutine("CloseDoor");
