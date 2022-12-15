@@ -124,6 +124,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdab0b54a66ad6b438de4528352d97c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerRef: {fileID: 0}
+  audioSource: {fileID: 0}
+  audioclip: {fileID: 0}
+  hud: {fileID: 0}
+  totalcards: 0
 --- !u!1 &7281356119763917973
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +140,7 @@ GameObject:
   - component: {fileID: 1107977915986128336}
   m_Layer: 0
   m_Name: Keycard
-  m_TagString: Untagged
+  m_TagString: Keycard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

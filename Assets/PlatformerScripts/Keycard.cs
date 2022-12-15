@@ -7,6 +7,8 @@ public class Keycard : MonoBehaviour
     public GameObject PlayerRef;
     public AudioSource audioSource;
     public AudioClip audioclip;
+    public HUD hud;
+    public int totalcards = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +21,16 @@ public class Keycard : MonoBehaviour
         transform.Rotate(0f, 100f * Time.deltaTime, 0f, Space.Self);
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
-        Destroy(this.gameObject);
         audioSource.PlayOneShot(audioclip);
+        //totalcards++;
+        //hud.CollectedKeycards = totalcards;
+        //hud.UpdateHUD();
+        Destroy(this.gameObject);
+        
         
     }
     //PlayerRef.updateUI()
+    */
 }
