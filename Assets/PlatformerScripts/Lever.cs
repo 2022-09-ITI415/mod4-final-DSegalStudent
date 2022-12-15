@@ -28,17 +28,26 @@ public class Lever : MonoBehaviour
             Door2.GetComponent<Animator>().enabled = true;
             Door2.GetComponent<Animator>().Play("Front Gate Opening");
 
+
             //StartCoroutine("CloseDoor");
+        }else if (Player.GetComponent<HUD>().CollectedKeycards < 5)
+        {
+            Player.GetComponent<HUD>().LeverErrorPrompt.gameObject.SetActive(true);
+            StartCoroutine("DisableErrorText");
         }
     }
-
+    IEnumerator DisableErrorText()
+    {
+        yield return new WaitForSeconds(timer);
+        Player.GetComponent<HUD>().LeverErrorPrompt.gameObject.SetActive(false);
+    }
     IEnumerator CloseDoor()
     {
         yield return new WaitForSeconds(timer);
         Door1.GetComponent<Animator>().enabled = false;
         Door2.GetComponent<Animator>().enabled = false;
         //Door1.GetComponent<Animator>().StopPlayback();
-        doorOpen = false;
-        Debug.Log("Door Closed");
+        //doorOpen = false;
+        //Debug.Log("Door Closed");
     }
 }

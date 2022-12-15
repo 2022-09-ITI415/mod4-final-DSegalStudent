@@ -16,7 +16,9 @@ public class HUD : MonoBehaviour
 
     [Header("Set Dynamically")]
     public int CollectedKeycards;
+ 
     
+
 public void UpdateHUD()
     {
         
@@ -29,6 +31,7 @@ public void UpdateHUD()
     public void Start()
     {
         UpdateHUD();
+        LeverErrorPrompt.gameObject.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -40,4 +43,5 @@ public void UpdateHUD()
 
         }
     }
+
 }
