@@ -10,6 +10,8 @@ public class HUD : MonoBehaviour
     [Header("Set in Inspector")]
     public Text Collected;
     public GameObject Keycard;
+    public AudioSource audioSource;
+    public AudioClip audioclip;
 
     [Header("Set Dynamically")]
     public int CollectedKeycards;
@@ -32,7 +34,9 @@ public void UpdateHUD()
         if (other.CompareTag("Keycard"))
         {
             CollectedKeycards++;
+            audioSource.PlayOneShot(audioclip);
             Destroy(other.gameObject);
+
         }
     }
 }

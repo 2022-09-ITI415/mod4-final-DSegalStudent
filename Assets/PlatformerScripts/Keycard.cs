@@ -5,8 +5,7 @@ using UnityEngine;
 public class Keycard : MonoBehaviour
 {
     public GameObject PlayerRef;
-    public AudioSource audioSource;
-    public AudioClip audioclip;
+ 
     public HUD hud;
     public int totalcards = 0;
     // Start is called before the first frame update
