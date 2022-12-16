@@ -38,6 +38,7 @@ public void UpdateHUD()
         LeverErrorPrompt.gameObject.SetActive(false);
         PressE.gameObject.SetActive(false);
         Victory.gameObject.SetActive(false);
+
     }
     private void OnTriggerEnter(Collider other)
     {
