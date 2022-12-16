@@ -21,6 +21,7 @@ public class Lever : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        Player.GetComponent<HUD>().PressE.gameObject.SetActive(true);
         if (Input.GetKeyDown(KeyCode.E) && Player.GetComponent<HUD>().CollectedKeycards >= 5)
         {
             doorOpen = true;
@@ -39,6 +40,10 @@ public class Lever : MonoBehaviour
             Player.GetComponent<HUD>().LeverErrorPrompt.gameObject.SetActive(true);
             StartCoroutine("DisableErrorText");
         }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        Player.GetComponent<HUD>().PressE.gameObject.SetActive(false);
     }
     IEnumerator DisableErrorText()
     {

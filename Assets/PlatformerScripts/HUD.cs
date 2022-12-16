@@ -10,10 +10,13 @@ public class HUD : MonoBehaviour
     [Header("Set in Inspector")]
     public Text Collected;
     public Text LeverErrorPrompt;
+    public Text PressE;
+    public Text Victory;
     public GameObject Keycard;
     public AudioSource audioSource;
     public AudioClip audioclip;
     public AudioClip DoorOpening;
+    public AudioClip PowerCore;
 
     [Header("Set Dynamically")]
     public int CollectedKeycards;
@@ -33,6 +36,8 @@ public void UpdateHUD()
     {
         UpdateHUD();
         LeverErrorPrompt.gameObject.SetActive(false);
+        PressE.gameObject.SetActive(false);
+        Victory.gameObject.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -48,6 +53,11 @@ public void UpdateHUD()
     public void PlayDoorOpening()
     {
         audioSource.PlayOneShot(DoorOpening);
+    }
+
+    public void PlayPowerCore()
+    {
+        audioSource.PlayOneShot(PowerCore);
     }
 
 }
