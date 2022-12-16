@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/MainMenu.unity
     guid: 5cbc63de0e5c241f68425b281181f509
   - enabled: 1
+    path: Assets/PlatformerScene.unity
+    guid: ab8f77dc4ae38014dbab793ab4cb7791
+  - enabled: 1
     path: Assets/_Labs/01-Probuilder/01-Probuilder.unity
     guid: 1cf9bb62474c84a0e87cdaff8cb74df7
   - enabled: 1

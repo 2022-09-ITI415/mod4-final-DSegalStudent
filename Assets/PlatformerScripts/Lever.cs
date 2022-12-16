@@ -17,6 +17,7 @@ public class Lever : MonoBehaviour
     {
         Door1.GetComponent<Animator>().enabled = false;
         Door2.GetComponent<Animator>().enabled = false;
+        cam.GetComponent<Camera>().enabled = false;
     }
 
     private void OnTriggerStay(Collider other)
@@ -27,6 +28,7 @@ public class Lever : MonoBehaviour
             doorOpen = true;
             Debug.Log("Door Open");
             FPSCam.GetComponent<Camera>().enabled = false;
+            cam.GetComponent<Camera>().enabled = true;
             Door1.GetComponent<Animator>().enabled = true;
             Door1.GetComponent<Animator>().Play("Front Gate Opening");
             Door2.GetComponent<Animator>().enabled = true;
@@ -57,6 +59,7 @@ public class Lever : MonoBehaviour
         Door2.GetComponent<Animator>().enabled = false;
         
         FPSCam.GetComponent<Camera>().enabled = true;
+        cam.GetComponent<Camera>().enabled = false;
         //Door1.GetComponent<Animator>().StopPlayback();
         //doorOpen = false;
         //Debug.Log("Door Closed");
