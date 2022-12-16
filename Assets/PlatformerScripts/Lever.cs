@@ -9,6 +9,8 @@ public class Lever : MonoBehaviour
     public GameObject Door1;
     public GameObject Door2;
     public GameObject Player;
+    public GameObject cam;
+    public GameObject FPSCam;
 
 
     private void Start()
@@ -23,6 +25,7 @@ public class Lever : MonoBehaviour
         {
             doorOpen = true;
             Debug.Log("Door Open");
+            FPSCam.GetComponent<Camera>().enabled = false;
             Door1.GetComponent<Animator>().enabled = true;
             Door1.GetComponent<Animator>().Play("Front Gate Opening");
             Door2.GetComponent<Animator>().enabled = true;
@@ -30,7 +33,7 @@ public class Lever : MonoBehaviour
             Player.GetComponent<HUD>().PlayDoorOpening();
 
 
-            //StartCoroutine("CloseDoor");
+            StartCoroutine("CloseDoor");
         }else if (Player.GetComponent<HUD>().CollectedKeycards < 5)
         {
             Player.GetComponent<HUD>().LeverErrorPrompt.gameObject.SetActive(true);
@@ -47,6 +50,8 @@ public class Lever : MonoBehaviour
         yield return new WaitForSeconds(timer);
         Door1.GetComponent<Animator>().enabled = false;
         Door2.GetComponent<Animator>().enabled = false;
+        
+        FPSCam.GetComponent<Camera>().enabled = true;
         //Door1.GetComponent<Animator>().StopPlayback();
         //doorOpen = false;
         //Debug.Log("Door Closed");
