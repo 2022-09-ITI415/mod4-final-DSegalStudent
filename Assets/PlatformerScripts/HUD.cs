@@ -12,6 +12,7 @@ public class HUD : MonoBehaviour
     public Text LeverErrorPrompt;
     public Text PressE;
     public Text Victory;
+    public Image dialouge;
     public GameObject Keycard;
     public AudioSource audioSource;
     public AudioClip audioclip;
@@ -38,6 +39,7 @@ public void UpdateHUD()
         LeverErrorPrompt.gameObject.SetActive(false);
         PressE.gameObject.SetActive(false);
         Victory.gameObject.SetActive(false);
+        dialouge.gameObject.SetActive(false);
 
     }
     private void OnTriggerEnter(Collider other)
