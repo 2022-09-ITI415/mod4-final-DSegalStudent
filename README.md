@@ -11,3 +11,9 @@ This project will house scenes for level design, interiors and exteriors, lighti
 - Audio - experiments with 2D and 3D audio
 - Particle systems - everything that looks cool that isn't geometry or texture
 - Prototype 3 - Bringing it all together in a small exploration/collection game
+
+
+Sources For Audio And Images
+-Dialogue Box Image: https://pixabay.com/illustrations/dialog-box-paper-chat-dialogue-5175270/
+-All Audio: Youtube
+
